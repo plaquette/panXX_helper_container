@@ -20,6 +20,7 @@ RUN apt-get update && \
 RUN /bin/bash -c "source /miniconda/etc/profile.d/conda.sh && \
     conda install -n base python=3.8 -y && \
     conda install -c conda-forge -c bioconda fasttree=2.1.11 -y && \
+    conda install -c conda-forge -c bioconda iqtree -y && \
     /miniconda/bin/pip install click==8.1.3 nextstrain-augur==16.0.1 ete3==3.1.3 && \
     conda clean -afy && \
     rm -rf /root/.cache"
